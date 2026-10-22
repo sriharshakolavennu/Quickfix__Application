@@ -1,0 +1,1 @@
+{"name":"quickfix","version":"1.0.0","description":"QuickFix on-demand home services (Express backend + web frontend)","main":"server.js","scripts":{"start":"node server.js"},"dependencies":{"express":"^4.21.2"}}
