@@ -73,4 +73,7 @@ A.post('/api/workers/:id/toggle',auth,need('Admin'),(q,s)=>{const w=db.workers.f
 A.post('/api/prices',auth,need('Admin'),(q,s)=>{const{id,i,v}=q.body||{};if(!CAT[id]||![0,1,2].includes(i)||!(v>=0&&v<=1e5))return E(s,'Invalid price');db.prices[id]=db.prices[id]||[...CAT[id]];db.prices[id][i]=Math.round(v);save();s.json({ok:1})});
 A.post('/api/rules',auth,need('Admin'),(q,s)=>{const{k,v}=q.body||{};if(!['free','late','otw'].includes(k)||!(v>=0&&v<=1e4))return E(s,'Invalid rule');db.rules[k]=+v;save();s.json({ok:1})});
 A.use((e,q,s,n)=>E(s,'Server error',500));
-A.listen(process.env.PORT||3000,()=>console.log('QuickFix running on http://localhost:'+(process.env.PORT||3000)));
+const PORT = process.env.PORT || 3000;
+A.listen(PORT, "0.0.0.0", () => {
+  console.log(`QuickFix running on port ${PORT}`);
+});
