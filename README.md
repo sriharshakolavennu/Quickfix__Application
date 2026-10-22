@@ -8,7 +8,7 @@ A full-stack web application (similar to Urban Company) built for customers in H
 
 ## 🌐 Live Demo
 
-**👉 Live link: `PASTE YOUR DEPLOYED LINK HERE`**
+**👉 Live link: https://quick-fix-backend-anor.onrender.com**
 
 > Demo logins are listed in the [Demo Accounts](#-demo-accounts) section below.
 
